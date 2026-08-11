@@ -158,7 +158,7 @@ export default function ZoomScroll() {
       {/* Верхній шар-трафарет логотипу */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none z-20">
         <img
-          src="/images/mask-pt-portal2.svg"
+          src="/images/mask-pt-portal1.svg"
           alt="PRO-TECH Portal"
           className="zoom-image w-full h-full object-cover"
         />
