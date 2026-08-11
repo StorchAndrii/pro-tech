@@ -75,14 +75,14 @@ export default function Services() {
       </div>
 
       {/* Сітка карток послуг */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6 sm:gap-8">
         {servicesList.map((service) => (
           <div
             key={service.id}
             id={service.id}
-            className="group relative rounded-2xl bg-neutral-900/60 hover:bg-neutral-900/95 border border-white/10 hover:border-red-500/50 p-6 sm:p-8 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between hover:shadow-[0_10px_30px_rgba(229,9,20,0.2)] hover:-translate-y-1 scroll-mt-28"
+            className="group relative h-full rounded-2xl bg-neutral-900/60 hover:bg-neutral-900/95 border border-white/10 hover:border-red-500/50 p-6 sm:p-8 transition-all duration-300 backdrop-blur-xl flex flex-col hover:shadow-[0_10px_30px_rgba(229,9,20,0.2)] hover:-translate-y-1 scroll-mt-28"
           >
-            <div>
+            <div className="flex-1">
               <div className="w-14 h-14 rounded-xl bg-black/80 border border-red-500/40 text-2xl flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(229,9,20,0.25)] group-hover:scale-110 group-hover:border-red-500/80 transition-all duration-300">
                 {service.icon}
               </div>
@@ -97,12 +97,12 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
-              <div className="flex flex-wrap gap-1.5">
+            <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between gap-3">
+              <div className="flex min-w-0 flex-wrap gap-1.5">
                 {service.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2.5 py-0.5 rounded-md bg-white/5 text-[11px] text-neutral-400 font-medium"
+                    className="px-2.5 py-0.5 rounded-md bg-white/5 text-[11px] text-neutral-400 font-medium whitespace-nowrap"
                   >
                     {tag}
                   </span>
@@ -110,7 +110,7 @@ export default function Services() {
               </div>
               <a
                 href="#contacts"
-                className="text-xs font-bold text-red-500 hover:text-red-400 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                className="shrink-0 whitespace-nowrap text-xs font-bold text-red-500 hover:text-red-400 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
               >
                 Запис &rarr;
               </a>
