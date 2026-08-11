@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black text-white selection:bg-red-600 selection:text-white">
+    <main className="relative min-h-dvh bg-black text-white selection:bg-red-600 selection:text-white">
       {/* Фіксована навігаційна панель */}
       <Header />
 

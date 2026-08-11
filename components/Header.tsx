@@ -6,13 +6,13 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/75 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/75 backdrop-blur-xl border-b border-white/10 transition-all duration-300 pt-[env(safe-area-inset-top,0px)]">
+      <div className="max-w-7xl mx-auto pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] sm:pl-[max(1.5rem,env(safe-area-inset-left,0px))] sm:pr-[max(1.5rem,env(safe-area-inset-right,0px))] lg:px-8 h-16 sm:h-20 flex items-center justify-between">
         {/* Логотип */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative h-9 w-auto flex items-center">
             <img
-              src="/images/name.png"
+              src="/images/image22.svg"
               alt="Автосервіс PRO-TECH"
               className="h-8 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300"
             />

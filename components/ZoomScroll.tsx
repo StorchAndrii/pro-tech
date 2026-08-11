@@ -77,7 +77,7 @@ export default function ZoomScroll() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen bg-black overflow-hidden select-none"
+      className="relative w-full h-dvh bg-black overflow-hidden select-none"
     >
       {/* Фоновий автомобіль */}
       <div className="absolute inset-0 w-full h-full">
@@ -90,30 +90,37 @@ export default function ZoomScroll() {
       </div>
 
       {/* Контент першого екрана */}
-      <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-3 sm:pb-6 flex flex-col justify-start">
+      <div className="relative z-10 w-full h-full max-w-7xl mx-auto pl-[max(0.75rem,env(safe-area-inset-left,0px))] pr-[max(0.75rem,env(safe-area-inset-right,0px))] sm:pl-[max(1.5rem,env(safe-area-inset-left,0px))] sm:pr-[max(1.5rem,env(safe-area-inset-right,0px))] lg:px-8 flex flex-col justify-start pt-[calc(4rem+env(safe-area-inset-top,0px)+0.5rem)] sm:pt-[calc(5rem+env(safe-area-inset-top,0px)+1rem)] pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))]">
         {/* Верхній заголовок-бейдж з логотипом та адресою */}
-        <div className="hero-top-badge opacity-0 text-center flex flex-col items-center gap-1">
+        <div className="hero-top-badge opacity-0 text-center flex flex-col items-center gap-0.5 sm:gap-1 shrink-0">
           <img
             src="/images/logoBg.png"
             alt="PRO-TECH"
-            className="h-24 sm:h-34 w-auto object-contain drop-shadow-[0_0_20px_rgba(229,9,20,0.5)] hover:scale-105 transition-transform duration-300"
+            className="h-14 sm:h-28 md:h-34 w-auto object-contain drop-shadow-[0_0_20px_rgba(229,9,20,0.5)] hover:scale-105 transition-transform duration-300"
           />
-          <span className="inline-flex items-center gap-2 px-3 py-0.5 sm:px-4 sm:py-1 rounded-full bg-red-600/20 border border-red-500/40 text-red-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest backdrop-blur-md">
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500 animate-pulse" />
-            Автосервіс PRO-TECH • Професійне обслуговування
+          <span className="inline-flex items-center gap-2 px-2.5 py-0.5 sm:px-4 sm:py-1 rounded-full bg-red-600/20 border border-red-500/40 text-red-400 text-[9px] sm:text-xs font-bold uppercase tracking-widest backdrop-blur-md max-w-[min(100%,22rem)] sm:max-w-none">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500 animate-pulse shrink-0" />
+            <span className="truncate sm:whitespace-normal">
+              Автосервіс PRO-TECH • Професійне обслуговування
+            </span>
           </span>
-          <p className="text-neutral-300 text-[11px] sm:text-xs font-medium tracking-wide flex items-center gap-1.5 drop-shadow-md">
-            <span className="text-red-500">📍</span> Кривий Ріг • вул. Володимира Великого 69
+          <p className="text-neutral-300 text-[10px] sm:text-xs font-medium tracking-wide flex items-center gap-1.5 drop-shadow-md">
+            <span className="text-red-500" aria-hidden="true">
+              📍
+            </span>
+            Кривий Ріг • вул. Володимира Великого 69
           </p>
         </div>
 
         <HeroServicesGrid />
 
         {/* Нижня плашка із контактами з visitka.jpg */}
-        <div className="hero-bottom-bar opacity-0 mt-auto p-2.5 sm:p-3.5 rounded-xl bg-neutral-950/90 border border-white/10 backdrop-blur-xl">
+        <div className="hero-bottom-bar opacity-0 mt-auto p-2 sm:p-3.5 rounded-xl bg-neutral-950/90 border border-white/10 backdrop-blur-xl shrink-0">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
             <div className="flex items-center justify-center sm:justify-start gap-2.5 sm:gap-4 text-xs">
-              <span className="text-neutral-400 font-medium hidden sm:inline">Швидкий запис:</span>
+              <span className="text-neutral-400 font-medium hidden sm:inline">
+                Швидкий запис:
+              </span>
               <div className="flex items-center justify-center gap-3 sm:gap-4">
                 <a
                   href="tel:+380678387111"
@@ -151,7 +158,7 @@ export default function ZoomScroll() {
       {/* Верхній шар-трафарет логотипу */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none z-20">
         <img
-          src="/images/mask-pt-portal.png"
+          src="/images/mask-pt-portal2.svg"
           alt="PRO-TECH Portal"
           className="zoom-image w-full h-full object-cover"
         />

@@ -46,7 +46,7 @@ export default function HeroServicesGrid({
 }: HeroServicesGridProps) {
   return (
     <div
-      className={`flex flex-col sm:flex-row justify-between gap-4 mt-6 ${className}`}
+      className={`grid grid-cols-2 sm:flex sm:flex-row sm:justify-between gap-2 sm:gap-4 mt-3 sm:mt-6 min-h-0 ${className}`}
     >
       <HeroServiceColumn
         items={leftServices}
